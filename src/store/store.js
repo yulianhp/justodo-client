@@ -43,10 +43,10 @@ export const store = new Vuex.Store({
         })
     },
     postNewTask (context, data) {
-      console.log(data)
+      // console.log(data)
       http.post('tasks', data)
         .then(data => {
-          console.log(data)
+          // console.log(data)
           context.commit('addTask', data.data.task)
         }).catch(err => {
           console.log(err)
